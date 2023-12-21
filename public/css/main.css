@@ -1,0 +1,128 @@
+.toparea {
+    background-color: #f48000;
+}
+
+.button_top {
+    color: white;
+    border: solid white 2px;
+    border-radius: 20px;
+}
+
+.button_top:hover {
+    background-color: #424242;
+    transition: all 1s ease 0s;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.fa__icons {
+    border: solid white 2px;
+    border-radius: 50%;
+    color: white;
+    width: 34px;
+    height: 34px;
+    padding-left: 9px;
+}
+
+.fa__icons:hover {
+    background-color: #424242;
+    transition: all 1s ease 0s;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.hamburger__icon {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 3px 7px 3px 7px;
+    background-color: #f48000;
+    color: white;
+    margin-left: 8px;
+}
+
+/* ------------------ Header ------------------  */
+.header__menu {
+    border-bottom: 3px solid #fbbe07;
+    padding-bottom: 0px;
+    font-size: 18px;
+}
+
+ul.flex>li:not(:last-child) {
+    border-right: 1px solid #444040;
+    /* Adjust the color as needed */
+    padding-right: 8px;
+    /* Adjust the spacing as needed */
+}
+
+/* ---------------------------------- nav bar ------------------------------- */
+.active__button {
+    background-color: #f48000;
+    padding: 1.25rem 0.5rem;
+}
+
+/* ------ Just used nav bar to Hover ----- */
+.nav__bar:hover {
+    transition: all 1s ease 0s;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+/* ------------------- Faculty Members Transition -------------------  */
+@keyframes slideRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-slide-right {
+    animation: slideRight 10s linear infinite;
+    /* Adjust the duration as needed */
+}
+
+/* -------------------------------- MEDIA QUERY -------------------------------- */
+@media (max-width: 768px) {
+
+    /* .header__mobile{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    } */
+    .active__button {
+        padding: 1rem;
+    }
+
+    .active__mobile {
+        background-color: #f48000;
+        padding: 1.25rem;
+    }
+
+    .header__menu ul li {
+        border-bottom: 1px solid #444040;
+        /* Separator line */
+        padding: 15px;
+        /* Adjust spacing as needed */
+    }
+
+    .carousel__home {
+        max-width: 90%;
+        /* Adjust the maximum width as needed */
+        margin: 0 auto;
+        /* Center the carousel horizontally */
+    }
+
+    .carousel-item img {
+        max-width: 100%;
+        /* Make images responsive within the carousel */
+    }
+}

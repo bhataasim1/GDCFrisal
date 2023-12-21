@@ -1,0 +1,20 @@
+.carousel-item {
+    display: none;
+}
+
+/* CSS for scrolling animation */
+@keyframes scroll {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.notification-list {
+    animation: scroll 15s linear infinite; /* Adjust the duration as needed */
+}
+.notification-list:hover {
+    animation-play-state: paused;
+}
