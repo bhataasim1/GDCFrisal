@@ -1,4 +1,4 @@
-<h1 class="flex justify-center items-center py-3 rounded-xl text-white font-bold text-lg mt-2 mb-2"
+<h1 class="flex justify-center py-3 rounded-xl text-white font-bold text-lg ml-10 mr-10 mt-2 mb-2"
     style="background-color: #f48000">Events</h1>
 
 <div class="container mx-auto p-4 rounded-xl border-t-4 border-b-4 border-yellow-700 mt-2 relative overflow-hidden">
