@@ -17,7 +17,7 @@
             <!-- End of Sample Box 1 -->
 
             <!-- Sample Box 2 (You can duplicate this for more boxes) -->
-            <a href="another-link-url"
+            <a href="#"
                 class="relative overflow-hidden border-2 border-gray-300 rounded-md h-40 flex items-center justify-center transition-opacity hover:opacity-75">
                 <img src="{{ asset('images/Societies/Heritage.jpg') }}" alt="Image Description"
                     class="w-full h-full object-cover">
@@ -29,7 +29,7 @@
             <!-- End of Sample Box 1 -->
 
             <!-- Sample Box 1 with Clickable Image and Button -->
-            <a href="your-link-url"
+            <a href="#"
                 class="relative overflow-hidden border-2 border-gray-300 rounded-md h-40 flex items-center justify-center transition-opacity hover:opacity-75">
                 <img src="{{ asset('images/a2.jpeg') }}" alt="Event Logo" class="w-full h-full object-cover">
                 <span
@@ -40,7 +40,7 @@
             <!-- End of Sample Box 1 -->
 
             <!-- Sample Box 1 with Clickable Image and Button -->
-            <a href="your-link-url"
+            <a href="#"
                 class="relative overflow-hidden border-2 border-gray-300 rounded-md h-40 flex items-center justify-center transition-opacity hover:opacity-75">
                 <img src="{{ asset('images/a2.jpeg') }}" alt="Event Logo" class="w-full h-full object-cover">
                 <span
