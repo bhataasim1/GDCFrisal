@@ -29,7 +29,7 @@
                     <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                         <a href="https://bhataasim.github.io/portfolio/" target="_blank" class="hover:text-orange-500">Bhat Aasim</a>
                     </h3>
-                    <p>Ethical Hacker | Full-Stack Developer</p>
+                    <p>Software Engineer | Ethical Hacker</p>
                     <ul class="flex justify-center mt-4 space-x-4">
                         <li>
                             <a href="https://facebook.com/bhataasim700" target="_blank" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
@@ -59,7 +59,7 @@
                     <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                         <a href="https://bhataasim.github.io/portfolio/" target="_blank" class="hover:text-orange-500">Bhat Aasim</a>
                     </h3>
-                    <p>Ethical Hacker | Full-Stack Developer</p>
+                    <p>Software Engineer | Ethical Hacker</p>
                     <ul class="flex justify-center mt-4 space-x-4">
                         <li>
                             <a href="https://facebook.com/bhataasim700" target="_blank" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
@@ -89,7 +89,7 @@
                     <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                         <a href="https://bhataasim.github.io/portfolio/" target="_blank" class="hover:text-orange-500">Bhat Aasim</a>
                     </h3>
-                    <p>Ethical Hacker | Full-Stack Developer</p>
+                    <p>Software Engineer | Ethical Hacker</p>
                     <ul class="flex justify-center mt-4 space-x-4">
                         <li>
                             <a href="https://facebook.com/bhataasim700" target="_blank" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
@@ -119,7 +119,7 @@
                     <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                         <a href="https://bhataasim.github.io/portfolio/" target="_blank" class="hover:text-orange-500">Bhat Aasim</a>
                     </h3>
-                    <p>Ethical Hacker | Full-Stack Developer</p>
+                    <p>Software Engineer | Ethical Hacker</p>
                     <ul class="flex justify-center mt-4 space-x-4">
                         <li>
                             <a href="https://facebook.com/bhataasim700" target="_blank" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
