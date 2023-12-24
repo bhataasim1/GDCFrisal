@@ -15,6 +15,14 @@
 <body class="bg-gray-100">
     <div class="container mx-auto mt-8">
 
+         <!-- View All Gallery Images Button -->
+    <div class="mt-4 text-center">
+        <a href="{{ route('admin.allGalleryImages') }}"
+            class="inline-block bg-red-500 text-white font-semibold px-4 py-2 rounded-full hover:bg-red-600 focus:outline-none focus:bg-red-600">
+            View Gallery Images
+        </a>
+    </div>
+
         <h1 class="text-2xl font-semibold mb-4 flex justify-center">Upload New Images to Gallery Page</h1>
 
         <div class="font-semibold flex text-red-600 justify-center py-1">

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
     <script src="https://kit.fontawesome.com/394052289f.js"></script>
     @vite('resources/css/app.css')
-    @vite('resources/js/app.js')
     <title>{{config('app.name')}}:Admin Dashboard</title>
 </head>
 
@@ -63,6 +62,9 @@
             </div>
         </div>
     </div>
+
+    <script src="{{ asset('js/main.js') }}"></script>
+    @vite('resources/js/app.js')
 
 </body>
 
