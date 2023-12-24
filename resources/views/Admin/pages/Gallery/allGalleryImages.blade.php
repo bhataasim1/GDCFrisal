@@ -22,11 +22,11 @@
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             @foreach ($allGalleryImages as $image)
-                <div class="relative group">
-                    <img src="{{ asset($image->image_file) }}" alt="Image" class="w-full h-auto">
+                <div class="relative group overflow-hidden rounded-md">
+                    <img src="{{ asset($image->image_file) }}" alt="Image" class="w-full h-40 object-cover">
                     <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-75 transition duration-300">
                         <div class="flex items-center justify-center h-full">
-                            <a href="{{ route('admin.editGalleryImage', $image->id)}}" class="text-white mx-2">
+                            <a href="{{ route('admin.editGalleryImage', $image->id) }}" class="text-white mx-2">
                                 <i class="fa fa-edit"></i> Edit
                             </a>
                             <form action="{{ route('admin.deleteGalleryImage', $image->id) }}" method="POST"
