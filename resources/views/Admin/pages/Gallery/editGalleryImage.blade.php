@@ -37,15 +37,23 @@
                 @enderror
             </div>
 
+            <!-- Current Image Preview -->
+            <div class="mb-4">
+                <label class="block text-gray-600 font-semibold mb-2">Current Image</label>
+                <img src="{{ asset($galleryImage->image_file) }}" alt="Current Image" id="currentImagePreview" class="w-32 h-auto mb-2">
+                <p class="text-sm text-gray-500">Current File: {{ $galleryImage->image_file }}</p>
+            </div>
+
             <!-- New Image File -->
             <div class="mb-4">
                 <label for="image_file" class="block text-gray-600 font-semibold mb-2">Upload New Image (Optional)</label>
                 <input type="file" id="image_file" name="image_file" accept=".jpg,.jpeg,.png"
-                    class="w-full border rounded-md border-gray-400 focus:outline-none focus:border-blue-500">
+                    class="w-full border rounded-md border-gray-400 focus:outline-none focus:border-blue-500"
+                    onchange="previewImage()">
                 @error('image_file')
                     <span class="text-red-700">{{ $message }}</span>
                 @enderror
-                <p class="text-sm text-gray-500 mt-2">Current File: {{ $galleryImage->image_file }}</p>
+                <img src="#" alt="New Image Preview" id="newImagePreview" class="w-32 h-auto mt-2 hidden">
             </div>
 
             <!-- Submit Button -->
@@ -58,7 +66,7 @@
         </form>
     </div>
 
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/admin.js') }}"></script>
     @vite('resources/js/app.js')
 
 </body>

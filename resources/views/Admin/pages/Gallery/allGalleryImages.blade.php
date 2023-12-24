@@ -48,7 +48,7 @@
         {{ $allGalleryImages->links() }}
     </div>
 
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/admin.js') }}"></script>
     @vite('resources/js/app.js')
 
 </body>
