@@ -203,6 +203,13 @@ class AdminController extends Controller
         return view('Admin.pages.postGalleryImages');
     }
 
+    public function viewAllGalleryImages()
+    {
+        $allGalleryImages = GalleryImages::latest()->paginate(20);
+
+        return view('Admin.pages.Gallery.allGalleryImages', compact('allGalleryImages'));
+    }
+
     public function postGalleryImage(GalleryImageRequest $request)
     {
 
@@ -235,6 +242,84 @@ class AdminController extends Controller
         }
     }
 
+    public function deleteGalleryImage($id)
+    {
+        try {
+            $galleryImage = GalleryImages::findOrFail($id);
+
+            $this->deleteAssociatedImageFile($galleryImage);
+
+            $galleryImage->delete();
+
+            return redirect()->route('admin.allGalleryImages')->with('status', 'Image deleted successfully.');
+        } catch (\Exception $e) {
+            return redirect()->route('admin.allGalleryImages')->with('status', 'Error deleting image. Please try again.');
+        }
+    }
+
+    private function deleteAssociatedImageFile($galleryImage)
+    {
+        if (!empty($galleryImage->image_file)) {
+            Storage::delete($galleryImage->image_file);
+        }
+    }
+
+    public function editGalleryImage($id)
+    {
+        $galleryImage = GalleryImages::findOrFail($id);
+        return view('Admin.pages.Gallery.editGalleryImage', compact('galleryImage'));
+    }
+
+    public function updateGalleryImage(Request $request, $id)
+    {
+        try {
+            $request->validate([
+                'image_title' => 'nullable|string|max:255',
+                'image_file' => 'nullable|file|mimes:jpg,jpeg,png',
+            ]);
+
+            $galleryImage = GalleryImages::findOrFail($id);
+
+            // Check if a new file is uploaded
+            if ($request->hasFile('image_file')) {
+                // Delete old file first
+                $this->deleteAssociatedImageFile($galleryImage);
+
+                // Update file with new title
+                $this->handleImageFileUpdate($galleryImage, $request->file('image_file'));
+            }
+
+            if ($request->filled('image_title')) {
+                $galleryImage->image_title = $request->input('image_title');
+            }
+
+            // Save the changes
+            $galleryImage->save();
+
+            return redirect()->route('admin.allGalleryImages')->with('status', 'Image updated successfully.');
+        } catch (\Exception $e) {
+            return redirect()->route('admin.allGalleryImages')->with('status', 'Error updating image. Please try again.');
+        }
+    }
+
+    private function handleImageFileUpdate($galleryImage, $file)
+    {
+        if (!empty($galleryImage->image_file)) {
+            // Delete old file
+            Storage::delete($galleryImage->image_file);
+        }
+
+        // Generate new file name based on image title
+        $fileName = Str::slug($galleryImage->image_title) . '.' . $file->getClientOriginalExtension();
+        $filePath = $file->storeAs('uploads/gallery', $fileName);
+
+        $galleryImage->image_file = $filePath;
+    }
+
+
+
+    // ---------------------------- Grievance Section Here --------------------------------
+
     public function grievancePage(Request $request)
     {
         $validatedData = $request->validate([
@@ -247,9 +332,9 @@ class AdminController extends Controller
 
         $grievances = Grievance::where(function ($query) use ($search) {
             $query->where('name', 'LIKE', $search)
-                ->orwhere('email', 'LIKE', $search)
-                ->orwhere('phone', 'LIKE', $search)
-                ->orwhere('subject', 'LIKE', $search);
+                ->orWhere('email', 'LIKE', $search)
+                ->orWhere('phone', 'LIKE', $search)
+                ->orWhere('subject', 'LIKE', $search);
         })->paginate($perPage)->appends(['search' => $search]);
 
         return view('Admin.pages.viewGrievances', compact('grievances', 'search'));
