@@ -9,7 +9,6 @@
     <link rel="icon" href="{{ asset('images/favicon.ico') }}">
     <script src="https://kit.fontawesome.com/394052289f.js"></script>
     @vite('resources/css/app.css')
-    @vite('resources/js/app.js')
     <title>{{ config('app.name') }}</title>
 </head>
 

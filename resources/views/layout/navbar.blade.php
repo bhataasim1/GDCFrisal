@@ -16,6 +16,10 @@
                 <a href="{{ route('gallery') }}" class="text-white hover:bg-yellow-600 py-5 px-2 nav__bar">Gallery</a>
             </li>
 
+            <li>
+                <a href="#" class="text-white hover:bg-yellow-600 py-5 px-2 nav__bar">Facilities</a>
+            </li>
+
             {{-- <li class="relative group">
                 <a href="#" class="text-white hover:bg-yellow-600 py-5 px-2 nav__bar" id="departments-toggle">
                     <span>Departments</span>
