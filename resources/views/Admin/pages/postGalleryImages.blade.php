@@ -46,7 +46,9 @@
             <div class="mb-4">
                 <label for="image_file" class="block text-gray-600 font-semibold mb-2">Upload Image</label>
                 <input type="file" id="image_file" name="image_file" accept=".jpg,.jpeg,.png"
-                    class="w-full border rounded-md border-gray-400 focus:outline-none focus:border-blue-500" required>
+                    class="w-full border rounded-md border-gray-400 focus:outline-none focus:border-blue-500"
+                    onchange="previewImage()" required>
+                <img src="#" alt="Image Preview" id="newImagePreview" class="mt-2 hidden w-32 h-auto">
                 @error('image_file')
                     <span class="text-red-700">{{ $message }}</span>
                 @enderror
