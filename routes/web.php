@@ -39,16 +39,22 @@ Route::middleware(['throttle:300,1'])->group(function () {
 
     Route::middleware(['auth'])->group(function () {
         Route::prefix('admin')->group(function () {
+            
             Route::get('/dashboard', [AdminController::class, 'adminDashboard'])->name('admin.dashboard');
+            
             Route::get('/post/notice', [AdminController::class, 'NoticePage'])->name('admin.noticePage');
             Route::post('/post/notice', [AdminController::class, 'NoticePost'])->name('admin.noticePost');
             Route::get('/all-notices', [AdminController::class, 'viewAllNotices'])->name('admin.allNotices');
             Route::delete('/notice/{id}', [AdminController::class, 'deleteNotice'])->name('admin.deleteNotice');
-            Route::get('notices/{id}/edit', [AdminController::class, 'editNotice'])->name('admin.editNotice');
-            Route::put('notices/{id}', [AdminController::class, 'updateNotice'])->name('admin.updateNotice');
+            Route::get('/notices/{id}/edit', [AdminController::class, 'editNotice'])->name('admin.editNotice');
+            Route::put('/notices/{id}', [AdminController::class, 'updateNotice'])->name('admin.updateNotice');
 
             Route::get('/post/gallery-images', [AdminController::class, 'GalleryPage'])->name('admin.galleryPage');
             Route::post('/post/gallery-images', [AdminController::class, 'PostGalleryImage'])->name('admin.galleryPost');
+            Route::get('/all-gallery-images', [AdminController::class, 'viewAllGalleryImages'])->name('admin.allGalleryImages');
+            Route::delete('/gallery-images/{id}', [AdminController::class, 'deleteGalleryImage'])->name('admin.deleteGalleryImage');
+            Route::get('/gallery-images/{id}/edit', [AdminController::class, 'editGalleryImage'])->name('admin.editGalleryImage');
+            Route::put('/gallery-images/{id}', [AdminController::class, 'updateGalleryImage'])->name('admin.updateGalleryImage');
 
             Route::get('/view/grievances', [AdminController::class, 'grievancePage'])->name('admin.grievancePage');
 
