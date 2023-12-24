@@ -52,6 +52,10 @@
         @endforeach
     </div>
 
+    <div class="flex justify-center">
+        {{ $allNotifications->links() }}
+    </div>
+
     <script src="{{ asset('js/admin.js') }}"></script>
     @vite('resources/js/app.js')
 </body>

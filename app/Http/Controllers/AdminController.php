@@ -63,7 +63,8 @@ class AdminController extends Controller
     public function viewAllNotices()
     {
         // $allNotifications = Notice::orderBy('updated_at', 'desc')->take(100)->get();
-        $allNotifications = Notice::latest()->take(100)->get();
+        // $allNotifications = Notice::latest()->take(100)->get();
+        $allNotifications = Notice::latest()->paginate(50);
 
         // Calculate whether a notice is new or not
         $currentDate = Carbon::now();
