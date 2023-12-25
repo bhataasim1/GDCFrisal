@@ -34,8 +34,8 @@
     {{-- ------------------------- accordian --------------------  --}}
     @include('layout.accordian')
 
-    {{-- ------------------------ Events ------------------------ --}}
-    @include('layout.events')
+    {{-- ------------------------ Societies ------------------------ --}}
+    @include('layout.societies')
 
     {{-- --------------------- Faculty ------------------------  --}}
     @include('layout.faculty')
