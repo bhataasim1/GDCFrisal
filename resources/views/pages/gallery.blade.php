@@ -7,16 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
     <script src="https://kit.fontawesome.com/394052289f.js"></script>
+
+    <!-- Add these lines FencyBox Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
     @vite('resources/css/app.css')
     <title>{{ config('app.name') }}: Gallery</title>
     <style>
         /* Add this style for fixed dimensions */
         .gallery-image {
-            width: 100%; /* Adjust the width as needed */
-            height: 300px; /* Adjust the height as needed */
+            width: 100%;
+            height: 300px;
             object-fit: cover;
-            border: 2px solid #f48000; /* Adjust the border as needed */
-            border-radius: 8px; /* Adjust the border radius as needed */
+            border: 2px solid #f48000;
+            border-radius: 8px;
         }
 
         .gallery-image-container {
@@ -27,10 +33,10 @@
             position: absolute;
             inset: 0;
             background-color: rgba(255, 255, 255, 0.8);
-            border: 2px solid #00f; /* Adjust the border color as needed */
-            border-radius: 8px; /* Adjust the border radius as needed */
+            border: 2px solid #00f;
+            border-radius: 8px;
             font-weight: bold;
-            color: #007bff; /* Adjust the text color as needed */
+            color: #007bff;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -55,15 +61,19 @@
     <div class="container mx-auto p-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
 
+            <!-- Modify the image containers in the loop -->
             @foreach ($galleryImages as $image)
                 <div class="gallery-image-container relative group">
-                    <img src="{{ asset($image->image_file) }}" alt="{{ $image->image_title }}"
-                        class="gallery-image">
-                    <div class="gallery-overlay">
-                        {{ $image->image_title }}
-                    </div>
+                    <a data-fancybox="gallery" href="{{ asset($image->image_file) }}">
+                        <img src="{{ asset($image->image_file) }}" alt="{{ $image->image_title }}"
+                            class="gallery-image">
+                        <div class="gallery-overlay">
+                            {{ $image->image_title }}
+                        </div>
+                    </a>
                 </div>
             @endforeach
+
 
         </div>
     </div>
