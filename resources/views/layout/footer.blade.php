@@ -4,7 +4,7 @@
         <div class="w-full md:w-1/4 mb-4 md:mb-0">
             <h3 class="text-xl font-semibold mb-4" style="color: #f48000;">Links</h3>
             <ul>
-                <li class="hover:text-orange-500"><a href="https://scholarships.gov.in/"><i class="fa-solid fa-caret-right px-1 mr-2"></i>Scholarship (NSP)</a></li>
+                <li class="hover:text-orange-500"><a href="{{url('https://scholarships.gov.in/')}}" target="_blank"><i class="fa-solid fa-caret-right px-1 mr-2"></i>Scholarship (NSP)</a></li>
                 <li class="hover:text-orange-500"><a href="{{route('aboutUs')}}"><i class="fa-solid fa-caret-right px-1 mr-2"></i>About</a></li>
                 <li class="hover:text-orange-500"><a href="{{route('gallery')}}"><i class="fa-solid fa-caret-right px-1 mr-2"></i>Gallery</a></li>
                 <li class="hover:text-orange-500"><a href="#"><i class="fa-solid fa-caret-right px-1 mr-2"></i>Teachers</a></li>
@@ -19,6 +19,7 @@
                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="{{url('https://github.com/GDCFrisal')}}" target="_blank"><i class="fa-brands fa-github"></i></a></li>
                 <!-- Add more social icons as needed -->
             </ul>
         </div>
